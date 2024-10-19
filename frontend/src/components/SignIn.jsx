@@ -23,7 +23,7 @@ const SignIn = () => {
         if (!token) return
 
 
-        const response = await axios.get('http://localhost:8000/api/auth/self', {
+        const response = await axios.get('https://jobportal-production-2c8f.up.railway.app/api/auth/self', {
           headers: {
             Authorization: `Bearer ${token}`, // Attach token here
           },
@@ -51,7 +51,7 @@ const SignIn = () => {
 
     try {
       setPhone((phone) => '+91' + phone)
-      const response = await axios.post('http://localhost:8000/api/auth/signup', {
+      const response = await axios.post('https://jobportal-production-2c8f.up.railway.app/api/auth/signup', {
         name,
         companyName,
         companySize,

@@ -32,7 +32,7 @@ const JobModal = ({ onClose }) => {
     e.preventDefault();
     setLoading(true); // Set loading to true when form submission starts
     try {
-      const response = await axios.post('http://localhost:8000/api/posts/create-post', {
+      const response = await axios.post('https://jobportal-production-2c8f.up.railway.app/api/posts/create-post', {
         title: jobTitle,
         description: jobDescription,
         expLvl: experienceLevel,

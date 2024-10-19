@@ -22,7 +22,7 @@ const Verification = () => {
   // Check verification status on component mount
   const checkVerificationStatus = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/auth/self', {
+      const response = await axios.get('https://jobportal-production-2c8f.up.railway.app/api/auth/self', {
         headers: {
           Authorization: `Bearer ${token}`, // Attach token here
         },
@@ -48,7 +48,7 @@ const Verification = () => {
   const handleSendEmailOTP = async () => {
     setLoading(true)
     try {
-      const response = await axios.post('http://localhost:8000/api/auth/send-verification-code', {
+      const response = await axios.post('https://jobportal-production-2c8f.up.railway.app/api/auth/send-verification-code', {
         email
       }, {
         headers: {
@@ -73,7 +73,7 @@ const Verification = () => {
   const handleVerifyEmailOTP = async () => {
     setLoading(true)
     try {
-      const response = await axios.post('http://localhost:8000/api/auth/verify-verification-code', {
+      const response = await axios.post('https://jobportal-production-2c8f.up.railway.app/api/auth/verify-verification-code', {
         email,
         providedCode: emailOTP,
       }, {
@@ -103,7 +103,7 @@ const Verification = () => {
     try {
 
 
-      const response = await axios.post('http://localhost:8000/api/auth/send-verification-code-mobile', {
+      const response = await axios.post('https://jobportal-production-2c8f.up.railway.app/api/auth/send-verification-code-mobile', {
         phone: '+91' + mobile,
       }, {
         headers: {
@@ -132,7 +132,7 @@ const Verification = () => {
   const handleVerifyMobileOTP = async () => {
     setmbloading(true)
     try {
-      const response = await axios.post('http://localhost:8000/api/auth/verify-verification-code-mobile', {
+      const response = await axios.post('https://jobportal-production-2c8f.up.railway.app/api/auth/verify-verification-code-mobile', {
         phone: '+91' + mobile,
         otp: mobileOTP,
       }, {

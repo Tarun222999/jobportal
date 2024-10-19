@@ -19,7 +19,7 @@ const Home = () => {
   const handleLogout = async () => {
     try {
       const token = localStorage.getItem('token'); // Retrieve token from local storage
-      const response = await axios.post('http://localhost:8000/api/auth/signout', {}, {
+      const response = await axios.post('https://jobportal-production-2c8f.up.railway.app/api/auth/signout', {}, {
         headers: {
           Authorization: `Bearer ${token}`, // Attach token in the header
         },

@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8000/api/auth/signin', {
+      const response = await axios.post('https://jobportal-production-2c8f.up.railway.app/api/auth/signin', {
         email,
         password,
       });
